@@ -18,8 +18,8 @@
 .SUBCKT NorG in1 in2 out vdd size = 1
 	M1 nodo1 in1 vdd vdd pmos W='size*UNIT_W' L=UNIT_L
 	M2 out in2 nodo1 vdd pmos W='size*UNIT_W' L=UNIT_L
-	M3 out in1 0 nmos W='size*UNIT_W' L=UNIT_L
-	M4 out in2		0 nmos W='size*UNIT_W' L=UNIT_L
+	M3 out in1 0 0 nmos W='size*UNIT_W' L=UNIT_L
+	M4 out in2 0 0 nmos W='size*UNIT_W' L=UNIT_L
 .ENDS
 *------------------------------------------------------------------
 *----------------Subcircutio para compuerta XOR--------------------
@@ -37,7 +37,7 @@
 	M7 Out A PU1 vdd pmos W='size*UNIT_W' L=UNIT_L
 	M8 Out BN PU1 vdd pmos W='size*UNIT_W' L=UNIT_L
 	
-	Out1 Out vdd NotG size = 1
+	Out Out1 vdd NotG size = 1
 	
 	
 .ENDS 
