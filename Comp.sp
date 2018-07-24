@@ -23,3 +23,21 @@
 .ENDS
 *------------------------------------------------------------------
 *----------------Subcircutio para compuerta XOR--------------------
+.SUBCKT XorG In1 In2 Out1 vdd size=1
+	A AN vdd NotG size = 1
+	B BN vdd NotG size = 1
+	
+	M1 Out A PD1 0 nmos W='size*UNIT_W' L=UNIT_L
+	M2 0 BN PD1 0 nmos W='size*UNIT_W' L=UNIT_L
+	M3 Out B PD2 0 nmos W='size*UNIT_W' L=UNIT_L
+	M4 0 AN PD2 0 nmos W='size*UNIT_W' L=UNIT_L
+	
+	M5 PU1 AN vdd vdd pmos W='size*UNIT_W' L=UNIT_L
+	M6 PU1 B vdd vdd pmos W='size*UNIT_W' L=UNIT_L
+	M7 Out A PU1 vdd pmos W='size*UNIT_W' L=UNIT_L
+	M8 Out BN PU1 vdd pmos W='size*UNIT_W' L=UNIT_L
+	
+	Out1 Out vdd NotG size = 1
+	
+	
+.ENDS 
