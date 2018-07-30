@@ -5,10 +5,11 @@
 .include '32nm.sp'
 
 
-*X1 A B Y vdd XorG  size = 1
-*XNAND A B Y2 vdd Nand2G  size = 1
-*X2 A B Y2 vdd 
+X1 A B Y1 vdd Nand2G  size = 1
+X2 B Y2 vdd NotG size = 1
+X3 A B Y3 vdd NorG size = 1
+X4 A B Y4 vdd XorG  size = 1
 
-.TRAN 1e-12 2e-6
+.TRAN 0.1e-12 5e-6
 
 .END
