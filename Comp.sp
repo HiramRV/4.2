@@ -37,6 +37,6 @@
 	M7 Out In1 PU1 vdd pmos W='size*UNIT_W' L=UNIT_L
 	M8 Out BN PU1 vdd pmos W='size*UNIT_W' L=UNIT_L
 	
-	Out Out1 vdd NotG size = 1
+	*Out Out1 vdd NotG size = 1
 		
 .ENDS 
